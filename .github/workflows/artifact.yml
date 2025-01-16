@@ -22,7 +22,7 @@ jobs:
         name: hello-artifact
         path: hello.txt
 
-  append:
+  download:
     needs: build
     runs-on: ubuntu-latest
 
@@ -37,4 +37,4 @@ jobs:
         path: ./artifacts
     
     - name: List downloaded files
-      run: ls -la ./artifacts/hello.txt   
+      run: cat ./artifacts/hello.txt   
